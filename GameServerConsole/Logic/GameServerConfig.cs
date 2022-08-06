@@ -37,8 +37,8 @@ namespace LeagueSandbox.GameServerConsole.Logic
         private void LoadConfig(string json)
         {
             var data = JObject.Parse(json);
-            AutoStartClient = (bool)data.SelectToken("autoStartClient");
-            ClientLocation = (string)data.SelectToken("clientLocation");
+            AutoStartClient = true;
+            ClientLocation = "C:\\Program Files\\League-of-Legends-4-20\\RADS\\solutions\\lol_game_client_sln\\releases\\0.0.1.68\\deploy\\";
         }
     }
 }

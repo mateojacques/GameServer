@@ -48,7 +48,7 @@ namespace LeagueSandbox.GameServerConsole
 
             if (configGameServerSettings.AutoStartClient)
             {
-                var leaguePath = configGameServerSettings.ClientLocation;
+                var leaguePath = "C:\\Program Files\\League-of-Legends-4-20\\RADS\\solutions\\lol_game_client_sln\\releases\\0.0.1.68\\deploy\\";
                 if (Directory.Exists(leaguePath))
                 {
                     leaguePath = Path.Combine(leaguePath, "League of Legends.exe");
@@ -105,6 +105,7 @@ namespace LeagueSandbox.GameServerConsole
         /// <returns>The string defined in the configuration file or defined via launch arguments.</returns>
         private static string LoadConfig(string filePath, string currentJsonString, string defaultJsonString)
         {
+            filePath = "C:\\Users\\Usuario\\Documents\\Repositorios\\GameServer-Jacques\\GameServerConsole\\Settings\\GameInfo.json";
             if (!string.IsNullOrEmpty(currentJsonString))
                 return currentJsonString;
 
